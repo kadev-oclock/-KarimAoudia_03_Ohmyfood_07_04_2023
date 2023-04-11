@@ -1,12 +1,12 @@
 
-# Booky / Projet 3
+# OmyFood / Projet 3
 💪 Challenge
 
 développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques.
 
 
  
-      Transformez une maquette en site web avec HTML & CSS
+      finalisé les maquettes mobile et desktop 
 
 
 
@@ -17,16 +17,17 @@ développer un site “mobile first” qui répertorie les menus de restaurants 
 * intégration Mobile First
 * finalisé les maquettes mobile et desktop 
 * création d’animation
++ système de fichiers 7-1 (sass)
 
 
 
 
  
-# Paramétrer une application 
+# Installation de l'application 
 
  * git clone
  * npm install 
- * npm run sass
+ * npm run sass (build)
 
 
 ## Screenshots
