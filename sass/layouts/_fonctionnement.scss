@@ -1,0 +1,52 @@
+
+.function {
+  max-width: 1280px;
+  margin:auto;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: etape;
+    @media( min-width: 1024px ) {
+      display: flex;
+      justify-content:center;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    color: #7E7E7E;
+    font-size: 1.3rem;
+  }
+
+  &__item {
+    flex: 1;
+    font-weight: 500;
+    position: relative;
+    padding: 1.5rem;
+    margin: 1rem 0.5rem 1rem 0.75rem;
+    @include shadow;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    display: flex;
+    
+    &:before {
+      counter-increment: etape;
+      content: counter(etape);
+      position: absolute;
+      left: -10px;
+      bottom: 21px;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: $primary;
+      color: #FFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

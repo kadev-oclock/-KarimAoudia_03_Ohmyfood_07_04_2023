@@ -1,0 +1,4 @@
+// définit grâce à la directive @mixin puis le nom que vous souhaitez lui attribuer
+@mixin shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
