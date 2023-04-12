@@ -1,12 +1,12 @@
 
-# OmyFood / Projet 3
+# OhmyFood / Projet 3
 💪 Challenge
 
 développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques.
 
 
  
-      finalisé les maquettes mobile et desktop 
+     
 
 
 
@@ -17,7 +17,7 @@ développer un site “mobile first” qui répertorie les menus de restaurants 
 * intégration Mobile First
 * finalisé les maquettes mobile et desktop 
 * création d’animation
-+ système de fichiers 7-1 (sass)
+* bonus : système de fichiers 7-1 (sass)
 
 
 
@@ -28,6 +28,7 @@ développer un site “mobile first” qui répertorie les menus de restaurants 
  * git clone
  * npm install 
  * npm run sass (build)
+ * npm run start (live server)
 
 
 ## Screenshots

@@ -1,55 +1,58 @@
 .title {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    @include shadow;
-    margin-bottom: 0.1rem;
-    align-items: center;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  @include shadow;
+  margin-bottom: 0.1rem;
+  align-items: center;
 }
 
 .bg-city {
-    background-color: #F7F7F7;
-    padding: 50px 0 50px 0;
+  background-color: #F7F7F7;
+  padding: 50px 0 50px 0;
 }
 
 .city {
-    text-align: center;
-    padding: 15px;
-    font-weight: 500;
-    background: #EAEAEA;
+  text-align: center;
+  padding: 15px;
+  font-weight: 500;
+  background: #EAEAEA;
 
 
-    &__icon {
-        margin-right: 1rem;
-    }
+  &__icon {
+    margin-right: 1rem;
+  }
 }
 
 .intro {
-    text-align: center;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 
-    &__title {
-        font-weight: 500;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+  &__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-    &__info {
-        font-weight: 300;
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
+  &__info {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
 
-    &__btn {
-        border-radius: 25px;
-        color: #FFF;
-        font-weight: 500;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        padding: 15px 20px;
-    }
+  &__btn {
+    border-radius: 25px;
+    color: #FFF;
+    font-weight: 500;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    padding: 15px 20px;
+  }
 
-    &__btn:hover {
-        @include shadow;
-        background-color: #FFF;
+  &__btn:hover {
+    @include shadow;
+    background-color: #FFF;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .3s;
 
-    }
+  }
 }
