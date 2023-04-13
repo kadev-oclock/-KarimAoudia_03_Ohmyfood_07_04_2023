@@ -77,6 +77,7 @@ img {
 .function {
   max-width: 1280px;
   margin: auto;
+  padding: 1rem;
 }
 .function__list {
   list-style: none;
@@ -122,6 +123,40 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contain-card {
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.card {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.card__badge {
+  width: 80px;
+  height: 29px;
+  background: #99E2D0;
+  color: #008766;
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  top: 15px;
+  right: 9px;
+  padding: 0.2rem;
+}
+.card__img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  height: 150px;
+}
+.card__content {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
