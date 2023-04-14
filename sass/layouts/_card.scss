@@ -1,37 +1,75 @@
+.restaurant {
+  background-color: #F7F7F7;
+}
+
 .contain-card {
-   max-width: 1280px;
-   margin: auto;
-   padding: 1rem;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+.cards {
+  @media(min-width: 1024px) {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 5.6rem;
+    column-gap: 5.6rem;
+    row-gap: 1.5rem;
+  }
 }
 
 .card {
-   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-   border-radius: 15px;
-   overflow: hidden;
-   position: relative;
-   margin-bottom: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
 
-   &__badge {
-      width: 80px;
-      height: 29px;
-      background: $greenLight;
-      color: #008766;
-      position: absolute;
-      text-align: center;
-      font-weight: 500;
-      top: 15px;
-      right: 9px;
-      padding: 0.2rem;
+  @media(min-width: 1024px) {
+    flex: 1 1 45%;
+  }
 
-   }
+  &__new {
+    width: 80px;
+    height: 29px;
+    background: $greenLight;
+    color: #008766;
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    top: 15px;
+    right: 9px;
+    padding: 0.2rem;
 
-   &__img {
-      border-radius: 15px 15px 0 0;
-      object-fit: cover;
-      height: 150px;
-   }
+  }
 
-   &__content {
-      padding: 10px;
-   }
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__info {
+    margin-top: 0;
+  }
+
+  &__img {
+    border-radius: 15px 15px 0 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 150px;
+
+    @media(min-width: 1024px) {
+      height: 192px;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+  }
+
+  &__content--with-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

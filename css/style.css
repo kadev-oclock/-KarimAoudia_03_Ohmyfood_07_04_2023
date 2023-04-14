@@ -22,6 +22,35 @@ img {
   width: 100%;
 }
 
+.heart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-outline {
+  position: relative;
+  font-size: 25px;
+  color: black;
+  z-index: 2;
+}
+
+.heart-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  color: #FFF;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.heart-container:hover .heart-fill {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FFF;
+}
+
 .title {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -125,10 +154,24 @@ img {
   justify-content: center;
 }
 
+.restaurant {
+  background-color: #F7F7F7;
+}
+
 .contain-card {
   max-width: 1280px;
   margin: auto;
   padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 5.6rem;
+    column-gap: 5.6rem;
+    row-gap: 1.5rem;
+  }
 }
 
 .card {
@@ -138,7 +181,12 @@ img {
   position: relative;
   margin-bottom: 1rem;
 }
-.card__badge {
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+.card__new {
   width: 80px;
   height: 29px;
   background: #99E2D0;
@@ -150,13 +198,90 @@ img {
   right: 9px;
   padding: 0.2rem;
 }
+.card__title {
+  margin-bottom: 0;
+}
+.card__info {
+  margin-top: 0;
+}
 .card__img {
   border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
   object-fit: cover;
   height: 150px;
 }
+@media (min-width: 1024px) {
+  .card__img {
+    height: 192px;
+  }
+}
 .card__content {
   padding: 10px;
+}
+.card__content--with-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-contain {
+  background: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 30px 25px;
+}
+@media (max-width: 760px) {
+  .footer-contain {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer__copy {
+    order: 1;
+  }
+  .link {
+    margin-bottom: 0.5rem;
+  }
+  .link__1 {
+    order: 2;
+  }
+  .link__2 {
+    order: 3;
+  }
+  .link__3 {
+    order: 4;
+  }
+  .link__4 {
+    order: 5;
+  }
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.link:hover {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__copy {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 20px;
+  font-family: "Shrikhand", cursive;
+}
+
+.footer_icon {
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
