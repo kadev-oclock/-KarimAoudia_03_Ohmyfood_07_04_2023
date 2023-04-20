@@ -1,7 +1,6 @@
-
 .function {
   max-width: 1280px;
-  margin:auto;
+  margin: auto;
   padding: 1rem;
 
   &__list {
@@ -9,9 +8,10 @@
     padding: 0;
     margin: 0;
     counter-reset: etape;
-    @media( min-width: 1024px ) {
+
+    @media(min-width: 1024px) {
       display: flex;
-      justify-content:center;
+      justify-content: center;
     }
   }
 
@@ -31,7 +31,7 @@
     border-radius: 20px;
     background-color: #f6f6f6;
     display: flex;
-    
+
     &:before {
       counter-increment: etape;
       content: counter(etape);

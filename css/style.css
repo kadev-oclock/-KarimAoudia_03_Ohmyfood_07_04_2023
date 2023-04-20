@@ -284,4 +284,127 @@ img {
   margin-right: 0.5rem;
 }
 
+.icon {
+  position: relative;
+}
+.icon__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.1rem;
+  padding: 1rem;
+  align-items: center;
+}
+.icon__arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-banner {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+  background-color: #F7F7F7;
+  margin-top: -4rem;
+  z-index: 1000;
+  position: relative;
+}
+.menu__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", cursive;
+}
+.menu__contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__carte {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.menu__carte::after {
+  content: "";
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 3rem;
+  height: 0.15rem;
+}
+.menu__items {
+  display: flex;
+  align-items: end;
+}
+.menu__item {
+  padding: 0.8rem;
+}
+.menu__bgCard {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+}
+.menu__subtitle {
+  margin: 0;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__info {
+  margin: 0;
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__price {
+  font-weight: 900;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.6rem;
+}
+.menu__bgIcon {
+  background: #99E2D0;
+  margin-right: -4rem;
+  width: 4rem;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  transition-duration: 0.5s;
+}
+.menu__bgCard:hover {
+  transition: all 1s;
+  margin-right: -1rem;
+}
+.menu__icon {
+  padding: 1.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: transform 0s;
+}
+.menu__icon:hover {
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -15,27 +15,29 @@
   .footer__copy {
     order: 1;
   }
+
   .link {
     margin-bottom: 0.5rem;
-  
 
-  &__1 {
-    order: 2;
-  }
 
-  &__2 {
-    order: 3;
-  }
+    &__1 {
+      order: 2;
+    }
 
-  &__3 {
-    order: 4;
-  }
+    &__2 {
+      order: 3;
+    }
 
-  &__4 {
-    order: 5;
+    &__3 {
+      order: 4;
+    }
+
+    &__4 {
+      order: 5;
+    }
   }
 }
-}
+
 .link {
   color: #fff;
   text-decoration: none;
