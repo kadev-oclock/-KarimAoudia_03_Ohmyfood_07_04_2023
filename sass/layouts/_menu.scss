@@ -78,6 +78,9 @@
 
   &__item {
     padding: 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
 
@@ -102,6 +105,7 @@
     font-weight: 300;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__price {
@@ -115,8 +119,7 @@
 
   &__bgIcon {
     background: $greenLight;
-    margin-right: -4rem;
-    width: 4rem;
+    margin-right: -4.2rem;
     height: 100%;
     display: inline-flex;
     align-items: center;
@@ -124,24 +127,64 @@
     transition-duration: .5s;
   }
 
-  &__bgCard:hover {
-    transition: all 1s;
-    margin-right: -1rem;
+  &__bgCard:hover .menu__bgIcon {
+    margin-right: 0;
+    transition: all 0.7s ease-in-out;
+    width: 4rem;
   }
 
   &__icon {
     padding: 1.5rem;
     color: #ffffff;
     font-size: 1.2rem;
-    transition: transform 0s;
+    transition: transform 0.5s;
+
+
   }
 
-
-
-  &__icon:hover {
+  &__bgCard:hover .menu__icon {
     transform: rotate(360deg);
     transition: all 1s ease-in-out;
+  }
 
+  &__animation1 {
+    -webkit-animation-delay: 250ms;
+    animation-delay: 250ms;
+    -webkit-animation: fadein 5s;
+    animation: fadein 5s;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+  }
+
+  &__animation2 {
+    -webkit-animation-delay: 500ms;
+    animation-delay: 500ms;
+  }
+
+  &__animation3 {
+    -webkit-animation-delay: 750ms;
+    animation-delay: 750ms;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadein {
+
+    /* sur Safari et Chrome */
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
 

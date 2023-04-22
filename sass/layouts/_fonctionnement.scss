@@ -20,6 +20,9 @@
     color: #7E7E7E;
     font-size: 1.3rem;
   }
+  &__item:hover .function__icon{
+    color: #fff;
+  }
 
   &__item {
     flex: 1;
@@ -48,6 +51,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    &:hover {
+      background-color: $primary;
+      opacity: 0.8;
     }
   }
 }
