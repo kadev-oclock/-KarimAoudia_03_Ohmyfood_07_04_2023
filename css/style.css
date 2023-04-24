@@ -328,6 +328,12 @@ img {
   margin-top: -4rem;
   z-index: 1000;
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.menu__btn {
+  text-align: center;
+  margin: 3rem 0 3rem 0;
 }
 .menu__title {
   font-weight: 500;
@@ -428,10 +434,16 @@ img {
 .menu__animation2 {
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
+  -webkit-animation: fadein 5s;
+  animation: fadein 5s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 .menu__animation3 {
   -webkit-animation-delay: 750ms;
   animation-delay: 750ms;
+  -webkit-animation: fadein 5s;
+  animation: fadein 5s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 @keyframes fadein {
   from {

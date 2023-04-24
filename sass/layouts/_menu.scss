@@ -36,7 +36,13 @@
   margin-top: -4rem;
   z-index: 1000;
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 
+  &__btn {
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+  }
 
   &__title {
     font-weight: 500;
@@ -158,11 +164,17 @@
   &__animation2 {
     -webkit-animation-delay: 500ms;
     animation-delay: 500ms;
+    -webkit-animation: fadein 5s;
+    animation: fadein 5s;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
   }
 
   &__animation3 {
     -webkit-animation-delay: 750ms;
     animation-delay: 750ms;
+    -webkit-animation: fadein 5s;
+    animation: fadein 5s;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
   }
 
   @keyframes fadein {
