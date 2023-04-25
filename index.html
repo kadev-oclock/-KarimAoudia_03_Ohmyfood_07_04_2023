@@ -13,6 +13,18 @@
   </head>
 
   <body>
+    <div class="loader__container">
+      <svg
+        class="loader"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 340 340"
+      >
+        <circle cx="170" cy="170" r="160" stroke="#E2007C" />
+        <circle cx="170" cy="170" r="135" stroke="#404041" />
+        <circle cx="170" cy="170" r="110" stroke="#E2007C" />
+        <circle cx="170" cy="170" r="85" stroke="#404041" />
+      </svg>
+    </div>
     <header>
       <h1 class="title">ohmyfood</h1>
     </header>
@@ -20,8 +32,11 @@
       <section>
         <div class="city">
           <form>
-            <i class="fa-map-marker-alt fas city__icon"></i>
-            <span class="city__name">Paris, Belleville</span>
+            <label for="cityInput" class="sr-only">Entrez une ville :</label>
+            <div class="input-group">           
+                <span><i class="fa-map-marker-alt fas city__icon input-group-text"></i></span>
+              <input type="text" id="cityInput" class="form-control" placeholder="Paris, Belleville">
+            </div>
           </form>
         </div>
         <div class="intro bg-city">

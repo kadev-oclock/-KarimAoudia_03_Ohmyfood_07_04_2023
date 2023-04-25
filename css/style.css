@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 *,
 ::after,
@@ -34,6 +35,11 @@ img {
   z-index: 2;
 }
 
+.heart-outline:hover {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
 .heart-fill {
   position: absolute;
   top: 0;
@@ -58,6 +64,12 @@ img {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 0.1rem;
   align-items: center;
+}
+
+.form-control {
+  border: none;
+  background-color: #eaeaea;
+  color: black;
 }
 
 .bg-city {
@@ -126,8 +138,8 @@ img {
   color: #7E7E7E;
   font-size: 1.3rem;
 }
-.function__item:hover .function__icon {
-  color: #fff;
+.function .function__item:hover .function__icon {
+  color: #9356DC;
 }
 .function__item {
   flex: 1;
@@ -156,10 +168,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.function__item:hover {
-  background-color: #9356DC;
-  opacity: 0.8;
 }
 
 .restaurant {
@@ -321,6 +329,11 @@ img {
   background-repeat: no-repeat;
 }
 
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .menu {
   border-radius: 2rem 2rem 0 0;
   padding: 1rem;
@@ -328,8 +341,7 @@ img {
   margin-top: -4rem;
   z-index: 1000;
   position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
+  /* Définition de l'animation */
 }
 .menu__btn {
   text-align: center;
@@ -425,41 +437,122 @@ img {
   transition: all 1s ease-in-out;
 }
 .menu__animation1 {
-  -webkit-animation-delay: 250ms;
-  animation-delay: 250ms;
-  -webkit-animation: fadein 5s;
-  animation: fadein 5s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  opacity: 0;
+  transform: translateY(50px);
+  -webkit-animation: fadeInUp 1s forwards;
+  animation: fadeInUp 1s forwards;
 }
 .menu__animation2 {
-  -webkit-animation-delay: 500ms;
-  animation-delay: 500ms;
-  -webkit-animation: fadein 5s;
-  animation: fadein 5s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  opacity: 0;
+  transform: translateY(50px);
+  -webkit-animation: fadeInUp 1s 0.5s forwards;
+  animation: fadeInUp 1s 0.5s forwards;
 }
 .menu__animation3 {
-  -webkit-animation-delay: 750ms;
-  animation-delay: 750ms;
-  -webkit-animation: fadein 5s;
-  animation: fadein 5s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  opacity: 0;
+  transform: translateY(50px);
+  -webkit-animation: fadeInUp 1s 1s forwards;
+  animation: fadeInUp 1s 1s forwards;
 }
-@keyframes fadein {
+@-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  opacity: 0.9;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7450980392);
+  inset: 0;
+  z-index: 999;
+  animation: disappear 3s forwards;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes disappear {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loader {
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+}
+
+circle {
+  fill: none;
+  stroke-width: 3.5;
+  animation-name: preloader;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-iteration-count: 3s;
+  animation-timing-function: ease-in-out;
+  transform-origin: 170px 170px;
+  will-change: transform;
+}
+circle:nth-of-type(1) {
+  stroke-dasharray: 550px;
+}
+circle:nth-of-type(2) {
+  stroke-dasharray: 500px;
+}
+circle:nth-of-type(3) {
+  stroke-dasharray: 450px;
+}
+circle:nth-of-type(4) {
+  stroke-dasharray: 300px;
+}
+circle:nth-of-type(1) {
+  animation-delay: -0.15s;
+}
+circle:nth-of-type(2) {
+  animation-delay: -0.3s;
+}
+circle:nth-of-type(3) {
+  animation-delay: -0.45s;
+}
+circle:nth-of-type(4) {
+  animation-delay: -0.6s;
+}
+
+@keyframes preloader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    display: none;
   }
 }
 

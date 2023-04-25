@@ -29,6 +29,11 @@
   background-repeat: no-repeat;
 }
 
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .menu {
   border-radius: 2rem 2rem 0 0;
   padding: 1rem;
@@ -36,8 +41,7 @@
   margin-top: -4rem;
   z-index: 1000;
   position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
+
 
   &__btn {
     text-align: center;
@@ -154,48 +158,49 @@
   }
 
   &__animation1 {
-    -webkit-animation-delay: 250ms;
-    animation-delay: 250ms;
-    -webkit-animation: fadein 5s;
-    animation: fadein 5s;
-    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-animation: fadeInUp 1s forwards;
+    animation: fadeInUp 1s forwards;
   }
 
   &__animation2 {
-    -webkit-animation-delay: 500ms;
-    animation-delay: 500ms;
-    -webkit-animation: fadein 5s;
-    animation: fadein 5s;
-    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-animation: fadeInUp 1s 0.5s forwards;
+    animation: fadeInUp 1s 0.5s forwards;
   }
 
   &__animation3 {
-    -webkit-animation-delay: 750ms;
-    animation-delay: 750ms;
-    -webkit-animation: fadein 5s;
-    animation: fadein 5s;
-    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-animation: fadeInUp 1s 1s forwards;
+    animation: fadeInUp 1s 1s forwards;
   }
 
-  @keyframes fadein {
+  /* Définition de l'animation */
+  @-webkit-keyframes fadeInUp {
     from {
       opacity: 0;
+      transform: translateY(50px);
     }
 
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  @-webkit-keyframes fadein {
-
-    /* sur Safari et Chrome */
+  @keyframes fadeInUp {
     from {
       opacity: 0;
+      transform: translateY(50px);
     }
 
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 

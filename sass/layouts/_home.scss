@@ -5,7 +5,11 @@
   margin-bottom: 0.1rem;
   align-items: center;
 }
-
+.form-control {
+  border: none;
+  background-color: #eaeaea;
+  color: black;
+}
 .bg-city {
   background-color: #F7F7F7;
   padding: 50px 0 50px 0;
