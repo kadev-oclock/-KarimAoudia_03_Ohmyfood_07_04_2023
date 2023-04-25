@@ -1,35 +1,34 @@
 .heart-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .heart-outline {
-    position: relative;
-    font-size: 25px;
-    color: black;
-    z-index: 2;
-  }
+  position: relative;
+  display: inline-block;
+}
 
-  .heart-outline:hover {
-    opacity: 0;
-    transition: all 0.7s ease-in-out;
-  }
-  
-  .heart-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 25px;
-    color:#FFF;
-    z-index: 1;
-    transition: all 0.7s ease-in-out;
-    transform: scale(1);
-  }
-  
-  .heart-container:hover .heart-fill {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color:#FFF;
-  }
-  
+.heart-outline {
+  position: relative;
+  font-size: 25px;
+  color: black;
+  z-index: 2;
+}
+
+.heart-outline:hover {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.heart-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  color: #FFF;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  transform: scale(1);
+}
+
+.heart-container:hover .heart-fill {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FFF;
+}
