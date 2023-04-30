@@ -30,14 +30,15 @@ img {
 
 .heart-outline {
   position: relative;
-  font-size: 25px;
   color: black;
+  transition: 0.25s ease-out;
+  font-size: 25px;
   z-index: 2;
 }
 
 .heart-outline:hover {
   opacity: 0;
-  transition: all 0.7s;
+  transition: 0.25s ease-out;
 }
 
 .heart-fill {
@@ -46,16 +47,16 @@ img {
   left: 0;
   font-size: 25px;
   color: #FFF;
-  z-index: 1;
-  transition: all 0.7s;
+  transform: scale(0);
+  transition: 0.25s ease-out;
 }
 
 .heart-container:hover .heart-fill {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  transition: 0.5s;
+  display: inline;
+  transform: scale(1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #FFF;
 }
 
 .title {
